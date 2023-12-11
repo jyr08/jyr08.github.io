@@ -1,7 +1,16 @@
 /* diagnostic styling */
-* {
-    outline: 1px solid gray;
+@import "https://unpkg.com/open-props";
+* 
+  h1 {
+    text-align: center;
+    font-size: 50px;
+    font-family: Georgia;
+    color: whitesmoke;
+    animation: var(--animation-pulse);
+
   }
+
+
   
   /* layout */
   body {
@@ -9,6 +18,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: var(--gradient-26);
   }
   
   /* scene */
@@ -38,20 +48,24 @@
     position: absolute;
     height: 100%;
     width: 100%;
+
   
     /* hide back face   */
     backface-visibility: hidden;
   }
   
   .front {
-    background: lightsteelblue;
+    background: transparent;
   }
   
   .back {
-    background: ivory;
+    background: transparent;
+    
+    
     /* flip it default   */
     transform: rotateY(180deg);
   }
+
   
   /* flip card
     * toggle with JS
@@ -62,6 +76,9 @@
   
   section img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
   }
+
+ 
   
